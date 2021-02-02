@@ -1,0 +1,11 @@
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\bin\Debug\DeskHealthApp.exe.config
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\bin\Debug\DeskHealthApp.exe
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\bin\Debug\DeskHealthApp.pdb
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.csprojAssemblyReference.cache
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.Form1.resources
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.Properties.Resources.resources
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.csproj.GenerateResource.cache
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.csproj.CoreCompileInputs.cache
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.exe
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.pdb
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.Stretch.resources
