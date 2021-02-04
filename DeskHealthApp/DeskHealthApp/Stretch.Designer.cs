@@ -75,15 +75,9 @@ namespace DeskHealthApp
             this.PreBtn.UseVisualStyleBackColor = true;
             this.PreBtn.Click += new System.EventHandler(this.PreBtn_Click);
             // 
-            // BreakLengT
-            // 
-            this.BreakLengT.Enabled = true;
-            this.BreakLengT.Tick += new System.EventHandler(this.BreakLengT_Tick);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.BreakLengT_Tick);
             // 
             // Stretch
             // 
@@ -108,7 +102,7 @@ namespace DeskHealthApp
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button PreBtn;
-        private System.Windows.Forms.Timer BreakLengT;
         private System.Windows.Forms.Timer timer1;
+        internal System.Windows.Forms.Timer BreakLengT;
     }
 }

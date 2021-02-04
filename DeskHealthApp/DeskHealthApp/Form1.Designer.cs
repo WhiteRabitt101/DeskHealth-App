@@ -31,6 +31,8 @@ namespace DeskHealthApp
         {
             this.components = new System.ComponentModel.Container();
             this.ActivityBox = new System.Windows.Forms.GroupBox();
+            this.YogaRB = new System.Windows.Forms.RadioButton();
+            this.StretchRB = new System.Windows.Forms.RadioButton();
             this.WorkOutRB = new System.Windows.Forms.RadioButton();
             this.StartB = new System.Windows.Forms.Button();
             this.TimeTellBreak = new System.Windows.Forms.Timer(this.components);
@@ -38,8 +40,8 @@ namespace DeskHealthApp
             this.WorkTimeLB = new System.Windows.Forms.Label();
             this.BreakLengthLB = new System.Windows.Forms.Label();
             this.BreakLenTB = new System.Windows.Forms.TextBox();
-            this.StretchRB = new System.Windows.Forms.RadioButton();
-            this.YogaRB = new System.Windows.Forms.RadioButton();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.RemindRB = new System.Windows.Forms.RadioButton();
             this.ActivityBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +52,32 @@ namespace DeskHealthApp
             this.ActivityBox.Controls.Add(this.WorkOutRB);
             this.ActivityBox.Location = new System.Drawing.Point(121, 134);
             this.ActivityBox.Name = "ActivityBox";
-            this.ActivityBox.Size = new System.Drawing.Size(295, 183);
+            this.ActivityBox.Size = new System.Drawing.Size(185, 183);
             this.ActivityBox.TabIndex = 0;
             this.ActivityBox.TabStop = false;
             this.ActivityBox.Text = "Activity Box";
+            // 
+            // YogaRB
+            // 
+            this.YogaRB.AutoSize = true;
+            this.YogaRB.Location = new System.Drawing.Point(7, 110);
+            this.YogaRB.Name = "YogaRB";
+            this.YogaRB.Size = new System.Drawing.Size(62, 21);
+            this.YogaRB.TabIndex = 2;
+            this.YogaRB.TabStop = true;
+            this.YogaRB.Text = "Yoga";
+            this.YogaRB.UseVisualStyleBackColor = true;
+            // 
+            // StretchRB
+            // 
+            this.StretchRB.AutoSize = true;
+            this.StretchRB.Location = new System.Drawing.Point(7, 82);
+            this.StretchRB.Name = "StretchRB";
+            this.StretchRB.Size = new System.Drawing.Size(74, 21);
+            this.StretchRB.TabIndex = 1;
+            this.StretchRB.TabStop = true;
+            this.StretchRB.Text = "Stretch";
+            this.StretchRB.UseVisualStyleBackColor = true;
             // 
             // WorkOutRB
             // 
@@ -114,33 +138,34 @@ namespace DeskHealthApp
             this.BreakLenTB.Size = new System.Drawing.Size(100, 22);
             this.BreakLenTB.TabIndex = 5;
             // 
-            // StretchRB
+            // ExitBtn
             // 
-            this.StretchRB.AutoSize = true;
-            this.StretchRB.Location = new System.Drawing.Point(7, 82);
-            this.StretchRB.Name = "StretchRB";
-            this.StretchRB.Size = new System.Drawing.Size(74, 21);
-            this.StretchRB.TabIndex = 1;
-            this.StretchRB.TabStop = true;
-            this.StretchRB.Text = "Stretch";
-            this.StretchRB.UseVisualStyleBackColor = true;
+            this.ExitBtn.Location = new System.Drawing.Point(365, 377);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(110, 41);
+            this.ExitBtn.TabIndex = 6;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // YogaRB
+            // RemindRB
             // 
-            this.YogaRB.AutoSize = true;
-            this.YogaRB.Location = new System.Drawing.Point(7, 110);
-            this.YogaRB.Name = "YogaRB";
-            this.YogaRB.Size = new System.Drawing.Size(62, 21);
-            this.YogaRB.TabIndex = 2;
-            this.YogaRB.TabStop = true;
-            this.YogaRB.Text = "Yoga";
-            this.YogaRB.UseVisualStyleBackColor = true;
+            this.RemindRB.AutoSize = true;
+            this.RemindRB.Location = new System.Drawing.Point(346, 157);
+            this.RemindRB.Name = "RemindRB";
+            this.RemindRB.Size = new System.Drawing.Size(150, 21);
+            this.RemindRB.TabIndex = 7;
+            this.RemindRB.TabStop = true;
+            this.RemindRB.Text = "Posture Reminders";
+            this.RemindRB.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(609, 465);
+            this.Controls.Add(this.RemindRB);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.BreakLenTB);
             this.Controls.Add(this.BreakLengthLB);
             this.Controls.Add(this.WorkTimeLB);
@@ -168,6 +193,8 @@ namespace DeskHealthApp
         private System.Windows.Forms.RadioButton StretchRB;
         private System.Windows.Forms.Label BreakLengthLB;
         private System.Windows.Forms.TextBox BreakLenTB;
+        private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.RadioButton RemindRB;
     }
 }
 

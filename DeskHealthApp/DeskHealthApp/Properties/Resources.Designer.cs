@@ -81,6 +81,20 @@ namespace DeskHealthApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  1.   Remaining seated, extend one leg outward.
+        /// 2.   Reach toward your toes.
+        /// 3.   Hold for 10 to 30 seconds.
+        /// 4.   Repeat on the other side.
+        ///
+        ///Be sure to do this one leg at a time, as doing this exercise with both legs out can cause back issues..
+        /// </summary>
+        internal static string StretchHamstring {
+            get {
+                return ResourceManager.GetString("StretchHamstring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shoulder, or pectoralis stretch
         ///    Clasp hands behind your back.
         ///    Push the chest outward, and raise the chin.

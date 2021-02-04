@@ -65,5 +65,23 @@ namespace DeskHealthApp
                 StretchForm.Show();
             }
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            // would like to make it give a different positive goodbye 
+            Random randNum = new Random();
+            
+            int random = randNum.Next(0,2);
+            if (random == 1)
+            {
+                MessageBox.Show(" Way to be healthy!! :)");
+            }
+            if(random == 0)
+            {
+                MessageBox.Show(" You did awesome!! :) ");
+            }
+
+            Close();
+        }
     }
 }
