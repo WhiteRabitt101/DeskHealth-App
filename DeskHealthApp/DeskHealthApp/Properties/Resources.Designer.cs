@@ -63,6 +63,26 @@ namespace DeskHealthApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Form1Background {
+            get {
+                object obj = ResourceManager.GetObject("Form1Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FormBackfround1 {
+            get {
+                object obj = ResourceManager.GetObject("FormBackfround1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StreImgEXP1 {
             get {
                 object obj = ResourceManager.GetObject("StreImgEXP1", resourceCulture);
@@ -91,6 +111,16 @@ namespace DeskHealthApp.Properties {
         internal static string StretchHamstring {
             get {
                 return ResourceManager.GetString("StretchHamstring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.healthline.com/health/deskercise#arms
+        ///https://www.readers.com/blog/9-desk-stretches-for-office/.
+        /// </summary>
+        internal static string Stretching_Sources_ {
+            get {
+                return ResourceManager.GetString("Stretching Sources_", resourceCulture);
             }
         }
         

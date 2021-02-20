@@ -15,10 +15,12 @@ namespace DeskHealthApp
     {
         //public static int WorkTime;
         public static int BreakTime;
+        public static bool restart = true;
         
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void WorkOutRB_CheckedChanged(object sender, EventArgs e)
@@ -43,7 +45,17 @@ namespace DeskHealthApp
             TimeTellBreak.Enabled = true;
                 TimeTellBreak.Interval = interval;
                 TimeTellBreak.Start();
-            
+
+            // Timer that Pops up Reminders about Posture / to breathe/ Positive stuff 
+            if(RemindRB.Checked)
+            {
+               // bool RestartTime = true;
+
+                RemindT.Enabled = restart;
+                RemindT.Interval = 5000; // thinking like every 10-30 min? +/-
+                RemindT.Start();
+
+            }
 
         }
 
@@ -51,8 +63,8 @@ namespace DeskHealthApp
         {
             if (WorkOutRB.Checked)
             {
-                TimeTellBreak.Enabled = false;
-                TimeTellBreak.Stop();
+                TimeTellBreak.Enabled = false; // These 2 lines
+                TimeTellBreak.Stop();          // stop the Timer
                 var WorkoutForm = new WorkOut(); ;
                 WorkoutForm.Show();
             }
@@ -63,6 +75,14 @@ namespace DeskHealthApp
                 
                 var StretchForm = new Stretch();
                 StretchForm.Show();
+            }
+            if(otherRB.Checked)
+            {
+                TimeTellBreak.Enabled = false;
+                TimeTellBreak.Stop();
+                Form other = new Form();
+                other.DesktopLocation = new Point(355,225);
+                other.Show();
             }
         }
 
@@ -83,5 +103,18 @@ namespace DeskHealthApp
 
             Close();
         }
+
+        public void RemindT_Tick(object sender, EventArgs e)
+        {
+            RemindT.Enabled = false;
+            var HealthRemind = new HealthyReminders();
+            HealthRemind.DesktopLocation = new Point(355, 355);
+            HealthRemind.Show();
+
+            MessageBox.Show(" Don't for get to breathe :) ");
+            
+        }
+
+
     }
 }

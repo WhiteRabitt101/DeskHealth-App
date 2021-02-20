@@ -9,3 +9,5 @@ C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp
 C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.exe
 C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.pdb
 C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.Stretch.resources
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.WorkOut.resources
+C:\Users\Taylor\source\repos\DeskHealthApp\DeskHealthApp\obj\Debug\DeskHealthApp.HealthyReminders.resources

@@ -31,6 +31,7 @@ namespace DeskHealthApp
         {
             this.components = new System.ComponentModel.Container();
             this.ActivityBox = new System.Windows.Forms.GroupBox();
+            this.otherRB = new System.Windows.Forms.RadioButton();
             this.YogaRB = new System.Windows.Forms.RadioButton();
             this.StretchRB = new System.Windows.Forms.RadioButton();
             this.WorkOutRB = new System.Windows.Forms.RadioButton();
@@ -42,20 +43,38 @@ namespace DeskHealthApp
             this.BreakLenTB = new System.Windows.Forms.TextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.RemindRB = new System.Windows.Forms.RadioButton();
+            this.RemindT = new System.Windows.Forms.Timer(this.components);
+            this.ReminderGB = new System.Windows.Forms.GroupBox();
+            this.HealthRemindRB = new System.Windows.Forms.RadioButton();
             this.ActivityBox.SuspendLayout();
+            this.ReminderGB.SuspendLayout();
             this.SuspendLayout();
             // 
             // ActivityBox
             // 
+            this.ActivityBox.BackColor = System.Drawing.Color.Transparent;
+            this.ActivityBox.Controls.Add(this.otherRB);
             this.ActivityBox.Controls.Add(this.YogaRB);
             this.ActivityBox.Controls.Add(this.StretchRB);
             this.ActivityBox.Controls.Add(this.WorkOutRB);
+            this.ActivityBox.ForeColor = System.Drawing.SystemColors.Window;
             this.ActivityBox.Location = new System.Drawing.Point(121, 134);
             this.ActivityBox.Name = "ActivityBox";
             this.ActivityBox.Size = new System.Drawing.Size(185, 183);
             this.ActivityBox.TabIndex = 0;
             this.ActivityBox.TabStop = false;
             this.ActivityBox.Text = "Activity Box";
+            // 
+            // otherRB
+            // 
+            this.otherRB.AutoSize = true;
+            this.otherRB.Location = new System.Drawing.Point(8, 138);
+            this.otherRB.Name = "otherRB";
+            this.otherRB.Size = new System.Drawing.Size(65, 21);
+            this.otherRB.TabIndex = 3;
+            this.otherRB.TabStop = true;
+            this.otherRB.Text = "Other";
+            this.otherRB.UseVisualStyleBackColor = true;
             // 
             // YogaRB
             // 
@@ -82,6 +101,7 @@ namespace DeskHealthApp
             // WorkOutRB
             // 
             this.WorkOutRB.AutoSize = true;
+            this.WorkOutRB.ForeColor = System.Drawing.SystemColors.Window;
             this.WorkOutRB.Location = new System.Drawing.Point(7, 54);
             this.WorkOutRB.Name = "WorkOutRB";
             this.WorkOutRB.Size = new System.Drawing.Size(82, 21);
@@ -116,6 +136,8 @@ namespace DeskHealthApp
             // WorkTimeLB
             // 
             this.WorkTimeLB.AutoSize = true;
+            this.WorkTimeLB.BackColor = System.Drawing.Color.Transparent;
+            this.WorkTimeLB.ForeColor = System.Drawing.SystemColors.Window;
             this.WorkTimeLB.Location = new System.Drawing.Point(118, 73);
             this.WorkTimeLB.Name = "WorkTimeLB";
             this.WorkTimeLB.Size = new System.Drawing.Size(180, 17);
@@ -125,6 +147,8 @@ namespace DeskHealthApp
             // BreakLengthLB
             // 
             this.BreakLengthLB.AutoSize = true;
+            this.BreakLengthLB.BackColor = System.Drawing.Color.Transparent;
+            this.BreakLengthLB.ForeColor = System.Drawing.SystemColors.Window;
             this.BreakLengthLB.Location = new System.Drawing.Point(322, 73);
             this.BreakLengthLB.Name = "BreakLengthLB";
             this.BreakLengthLB.Size = new System.Drawing.Size(125, 17);
@@ -151,20 +175,53 @@ namespace DeskHealthApp
             // RemindRB
             // 
             this.RemindRB.AutoSize = true;
-            this.RemindRB.Location = new System.Drawing.Point(346, 157);
+            this.RemindRB.BackColor = System.Drawing.Color.Transparent;
+            this.RemindRB.ForeColor = System.Drawing.SystemColors.Window;
+            this.RemindRB.Location = new System.Drawing.Point(6, 21);
             this.RemindRB.Name = "RemindRB";
-            this.RemindRB.Size = new System.Drawing.Size(150, 21);
+            this.RemindRB.Size = new System.Drawing.Size(142, 21);
             this.RemindRB.TabIndex = 7;
             this.RemindRB.TabStop = true;
-            this.RemindRB.Text = "Posture Reminders";
-            this.RemindRB.UseVisualStyleBackColor = true;
+            this.RemindRB.Text = "Health Reminders";
+            this.RemindRB.UseVisualStyleBackColor = false;
+            // 
+            // RemindT
+            // 
+            this.RemindT.Interval = 5000;
+            this.RemindT.Tick += new System.EventHandler(this.RemindT_Tick);
+            // 
+            // ReminderGB
+            // 
+            this.ReminderGB.BackColor = System.Drawing.Color.Transparent;
+            this.ReminderGB.Controls.Add(this.HealthRemindRB);
+            this.ReminderGB.Controls.Add(this.RemindRB);
+            this.ReminderGB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ReminderGB.Location = new System.Drawing.Point(335, 137);
+            this.ReminderGB.Name = "ReminderGB";
+            this.ReminderGB.Size = new System.Drawing.Size(200, 100);
+            this.ReminderGB.TabIndex = 8;
+            this.ReminderGB.TabStop = false;
+            this.ReminderGB.Text = "Reminders";
+            // 
+            // HealthRemindRB
+            // 
+            this.HealthRemindRB.AutoSize = true;
+            this.HealthRemindRB.Location = new System.Drawing.Point(6, 51);
+            this.HealthRemindRB.Name = "HealthRemindRB";
+            this.HealthRemindRB.Size = new System.Drawing.Size(110, 21);
+            this.HealthRemindRB.TabIndex = 8;
+            this.HealthRemindRB.TabStop = true;
+            this.HealthRemindRB.Text = "radioButton1";
+            this.HealthRemindRB.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DeskHealthApp.Properties.Resources.FormBackfround1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(609, 465);
-            this.Controls.Add(this.RemindRB);
+            this.Controls.Add(this.ReminderGB);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.BreakLenTB);
             this.Controls.Add(this.BreakLengthLB);
@@ -176,6 +233,8 @@ namespace DeskHealthApp
             this.Text = "Form1";
             this.ActivityBox.ResumeLayout(false);
             this.ActivityBox.PerformLayout();
+            this.ReminderGB.ResumeLayout(false);
+            this.ReminderGB.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +254,10 @@ namespace DeskHealthApp
         private System.Windows.Forms.TextBox BreakLenTB;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.RadioButton RemindRB;
+        private System.Windows.Forms.RadioButton otherRB;
+        private System.Windows.Forms.GroupBox ReminderGB;
+        private System.Windows.Forms.RadioButton HealthRemindRB;
+        public System.Windows.Forms.Timer RemindT;
     }
 }
 
